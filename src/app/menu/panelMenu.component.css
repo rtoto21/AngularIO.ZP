@@ -1,0 +1,141 @@
+.ui-panelmenu {
+    box-sizing: border-box;
+}
+
+.ui-panelmenu * {
+    box-sizing: border-box;
+}
+
+.ui-panelmenu .ui-panelmenu-panel {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-panelmenu .ui-panelmenu-header {
+    cursor: pointer;
+}
+
+.ui-panelmenu .ui-panelmenu-header a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: .25em .5em;
+}
+
+.ui-panelmenu .ui-panelmenu-top {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.ui-panelmenu .ui-panelmenu-bottom {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.ui-panelmenu .ui-panelmenu-default {
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+    color: #555;
+}
+
+.ui-panelmenu .ui-panelmenu-header.ui-panelmenu-active,
+.ui-panelmenu .ui-panelmenu-header.ui-panelmenu-active a {
+    border-color: #156090;
+    background-color: #186ba0;
+    color: #fff;
+}
+
+.ui-panelmenu .ui-panelmenu-disabled,
+.ui-panelmenu .ui-panelmenu-disabled a {
+    cursor: default;
+}
+
+.ui-panelmenu .ui-panelmenu-content-wrapper-overflown {
+    overflow: hidden;
+}
+
+/*
+
+.ui-panelmenu .ui-panelmenu-content-wrapper-overflown {
+    overflow: hidden;
+}
+
+.ui-panelmenu .ui-panelmenu-header {
+    position: relative;
+    margin: -1px 0 0 0;
+    zoom: 1;
+}
+
+.ui-panelmenu span {
+    vertical-align: middle;
+}
+
+.ui-panelmenu .fa {
+    width: 1em;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: .25em;
+}
+
+.ui-panelmenu .ui-menuitem-text {
+    margin-left: .125em;
+}
+
+.ui-panelmenu span {
+    vertical-align: middle;
+}
+
+.ui-panelmenu .ui-panelmenu-content {
+    padding: 0.2em 0;
+    border-top: 0;
+    overflow: auto;
+    zoom: 1;
+    outline: none;
+    margin-bottom: 1px;
+}
+
+.ui-panelmenu .ui-panelmenu-content .ui-menu-parent {
+    overflow: hidden;
+}
+
+.ui-panelmenu .ui-panelmenu-content-wrapper {
+    box-sizing: border-box;
+}
+
+
+
+.ui-panelmenu .ui-menu-list {
+    position: static;
+}
+
+.ui-panelmenu .ui-menuitem {
+    margin: 1px 0;
+    padding: 0;
+}
+
+.ui-panelmenu .ui-menu-separator {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.ui-panelmenu .ui-menuitem-link {
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+    border: 1px solid  transparent;
+    line-height: 1em;
+    cursor: pointer;
+    position: relative;
+    padding: .25em .5em;
+}
+
+.ui-panelmenu .ui-menu-parent .ui-menu-list {
+    margin-left: 1.5em;
+}
+
+.ui-panelmenu .ui-panelmenu-content .ui-menuitem-link {
+    color: #222222;
+}
+
+*/

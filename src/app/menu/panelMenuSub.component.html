@@ -1,0 +1,18 @@
+<ul class="ui-menu-list" [@submenu]="expanded ? 'visible' : 'hidden'">
+  <ng-template ngFor let-child [ngForOf]="item.items">
+    <li *ngIf="child.separator" class="ui-menu-separator">
+    <li *ngIf="!child.separator" class="ui-menuitem" [ngClass]="{'ui-menu-parent': child.items}" [class]="child.styleClass" [ngStyle]="child.style">
+      <a *ngIf="!child.routerLink" [href]="child.url || '#'" class="ui-menuitem-link" [attr.tabindex]="item.expanded ? null : '-1'" [ngClass]="{'ui-menuitem-link-hasicon': child.icon && child.items,'ui-panelmenu-disabled': child.disabled}" (click)="handleClick($event, child)" [attr.target]="child.target">
+        <span class="ui-panelmenu-icon fa fa-fw" [ngClass]="{'fa-caret-right': !child.expanded,'fa-caret-down': child.expanded}" *ngIf="child.items"></span>
+        <span class="ui-menuitem-icon fa fa-fw" [ngClass]="child.icon" *ngIf="child.icon"></span>
+        <span class="ui-menuitem-text">{{child.label}}</span>
+      </a>
+      <a *ngIf="child.routerLink" [routerLink]="child.routerLink" [routerLinkActive]="'ui-panelmenu-active'" [routerLinkActiveOptions]="child.routerLinkActiveOptions || {exact:false}" class="ui-menuitem-link" [ngClass]="{'ui-menuitem-link-hasicon': child.icon && child.items,'ui-panelmenu-disabled': child.disabled}" [attr.tabindex]="item.expanded ? null : '-1'" (click)="handleClick($event, child)" [attr.target]="child.target">
+          <span class="ui-panelmenu-icon fa fa-fw" [ngClass]="{'fa-caret-right': !child.expanded,'fa-caret-down': child.expanded}" *ngIf="child.items"></span>
+          <span class="ui-menuitem-icon fa fa-fw" [ngClass]="child.icon" *ngIf="child.icon"></span>
+          <span class="ui-menuitem-text">{{child.label}}</span>
+      </a>
+      <panelMenuSub [item]="child" [expanded]="child.expanded" *ngIf="child.items"></panelMenuSub>
+    </li>
+  </ng-template>
+</ul>
